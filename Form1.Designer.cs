@@ -21,82 +21,89 @@
 
         private void InitializeComponent()
         {
-            this.textBox = new System.Windows.Forms.TextBox();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.statusLabel = new System.Windows.Forms.Label();
-            this.overwriteCheckbox = new System.Windows.Forms.CheckBox();
-            this.startButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            textBox = new System.Windows.Forms.TextBox();
+            progressBar = new System.Windows.Forms.ProgressBar();
+            statusLabel = new System.Windows.Forms.Label();
+            overwriteCheckbox = new System.Windows.Forms.CheckBox();
+            startButton = new System.Windows.Forms.Button();
+            exitButton = new System.Windows.Forms.Button();
+            SuspendLayout();
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(12, 12);
-            this.textBox.Multiline = true;
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(776, 300);
-            this.textBox.TabIndex = 0;
+            textBox.Location = new System.Drawing.Point(14, 14);
+            textBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            textBox.Multiline = true;
+            textBox.Name = "textBox";
+            textBox.Size = new System.Drawing.Size(905, 346);
+            textBox.TabIndex = 0;
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(12, 318);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(776, 23);
-            this.progressBar.TabIndex = 1;
+            progressBar.Location = new System.Drawing.Point(14, 367);
+            progressBar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new System.Drawing.Size(905, 27);
+            progressBar.TabIndex = 1;
             // 
             // statusLabel
             // 
-            this.statusLabel.Location = new System.Drawing.Point(12, 344);
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(776, 23);
-            this.statusLabel.TabIndex = 2;
-            this.statusLabel.Text = "Status";
+            statusLabel.Location = new System.Drawing.Point(14, 397);
+            statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new System.Drawing.Size(905, 27);
+            statusLabel.TabIndex = 2;
+            statusLabel.Text = "Status";
             // 
             // overwriteCheckbox
             // 
-            this.overwriteCheckbox.AutoSize = true;
-            this.overwriteCheckbox.Location = new System.Drawing.Point(12, 370);
-            this.overwriteCheckbox.Name = "overwriteCheckbox";
-            this.overwriteCheckbox.Size = new System.Drawing.Size(128, 17);
-            this.overwriteCheckbox.TabIndex = 3;
-            this.overwriteCheckbox.Text = "Overwrite existing files";
-            this.overwriteCheckbox.UseVisualStyleBackColor = true;
+            overwriteCheckbox.AutoSize = true;
+            overwriteCheckbox.Location = new System.Drawing.Point(14, 427);
+            overwriteCheckbox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            overwriteCheckbox.Name = "overwriteCheckbox";
+            overwriteCheckbox.Size = new System.Drawing.Size(145, 19);
+            overwriteCheckbox.TabIndex = 3;
+            overwriteCheckbox.Text = "Overwrite existing files";
+            overwriteCheckbox.UseVisualStyleBackColor = true;
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(12, 393);
-            this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(75, 23);
-            this.startButton.TabIndex = 4;
-            this.startButton.Text = "Start";
-            this.startButton.UseVisualStyleBackColor = true;
-            this.startButton.Click += new System.EventHandler(this.RunApplication);
+            startButton.Location = new System.Drawing.Point(14, 453);
+            startButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            startButton.Name = "startButton";
+            startButton.Size = new System.Drawing.Size(88, 27);
+            startButton.TabIndex = 4;
+            startButton.Text = "Start";
+            startButton.UseVisualStyleBackColor = true;
+            startButton.Click += RunApplication;
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(713, 393);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 23);
-            this.exitButton.TabIndex = 5;
-            this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.Close);
+            exitButton.Location = new System.Drawing.Point(110, 453);
+            exitButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new System.Drawing.Size(88, 27);
+            exitButton.TabIndex = 5;
+            exitButton.Text = "Exit";
+            exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += Close;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.startButton);
-            this.Controls.Add(this.overwriteCheckbox);
-            this.Controls.Add(this.statusLabel);
-            this.Controls.Add(this.progressBar);
-            this.Controls.Add(this.textBox);
-            this.Name = "Form1";
-            this.Text = "TextToWordConverter";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(933, 519);
+            Controls.Add(exitButton);
+            Controls.Add(startButton);
+            Controls.Add(overwriteCheckbox);
+            Controls.Add(statusLabel);
+            Controls.Add(progressBar);
+            Controls.Add(textBox);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "Form1";
+            Text = "TextToWordConverter";
+            ResumeLayout(false);
+            PerformLayout();
         }
     }
 }

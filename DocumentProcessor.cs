@@ -4,11 +4,11 @@ using System.Text.RegularExpressions;
 
 namespace TextToWordConverter
 {
-    public class DocumentProcessor
+    public partial class DocumentProcessor
     {
-        private readonly string text;
+        private string text;
         private readonly Logger stepsLogger;
-        private readonly string[] grid;
+        private string[] grid;
 
         public DocumentProcessor(string text, Logger stepsLogger)
         {
