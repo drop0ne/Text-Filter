@@ -1,30 +1,19 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 namespace TextToWordConverter
 {
     public class Logger
     {
-        private readonly string logFile;
+        private readonly string logFilePath;
 
-        public Logger(string logFile)
+        public Logger(string logFilePath)
         {
-            this.logFile = logFile;
-            ClearLog();
+            this.logFilePath = logFilePath;
         }
 
         public void Log(string message)
         {
-            using (StreamWriter writer = new StreamWriter(logFile, true))
-            {
-                writer.WriteLine($"{DateTime.Now}: {message}");
-            }
-            Console.WriteLine(message);
-        }
-
-        public void ClearLog()
-        {
-            File.WriteAllText(logFile, string.Empty);
+            File.AppendAllText(logFilePath, $"{DateTime.Now}: {message}\n");
         }
     }
 }
